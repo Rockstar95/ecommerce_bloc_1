@@ -1,4 +1,3 @@
-import 'package:ecommerce_bloc_1/provider_implementation/providers/apptheme_provider.dart';
 import 'package:ecommerce_bloc_1/provider_implementation/providers/products_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -16,7 +15,6 @@ class ProviderMyApp extends StatelessWidget {
 
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider<AppThemeProvider>(create: (_) => AppThemeProvider()),
         ChangeNotifierProvider<ProductsProvider>(create: (_) => ProductsProvider()),
       ],
       child: MainApp(),
@@ -48,14 +46,10 @@ class _MainAppState extends State<MainApp> {
       isFirst = false;
     }
 
-    return Consumer<AppThemeProvider>(
-      builder: (BuildContext context, AppThemeProvider appThemeProvider, Widget? child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          theme: AppTheme.getThemeFromThemeMode(appThemeProvider.themeMode),
-          home: const ProviderHomeScreen(),
-        );
-      },
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.getThemeFromThemeMode(AppTheme.themeLight),
+      home: const ProviderHomeScreen(),
     );
   }
 }
