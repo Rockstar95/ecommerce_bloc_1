@@ -7,8 +7,8 @@ The tasks we have performed are
 2) Showing List of Products in Home Screen
 3) Searched Products using keywords
 
-### For Comparison Purpose, we have implemented this app in both Bloc and Provider architecture. 
-You can see below the file structure of both the architecture. In case of Bloc, we have to create more files compare to Provider. So that makes the app heavier. While in case of provider, it makes it so much compact in size.
+#### Note :  For Comparison Purpose, we have implemented this app in both Bloc and Provider architecture. 
+You can see below the file structure of both the architecture. In case of Bloc, we have to create more files compare to Provider. So that makes the app heavier. While in case of provider, it makes it so much compact in size. for that just one change need to be done in lib/main.dart file in 15 and 16 line. by default it is working on Bloc pattern.
 
 ## 1) File Structure of Bloc Architecture
 
@@ -38,7 +38,7 @@ bloc_implementation
 |
 ```
 
-## 2) File Structure of Bloc Architecture
+## 2) File Structure of Provider Architecture
 
 ```
 provider_implementation
